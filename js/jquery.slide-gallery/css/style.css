@@ -1,0 +1,14 @@
+.jsg-previewzoom {
+    position:fixed;
+    display:none;
+    background-color:#fff;
+    border:1px solid #ccc;
+    z-index:1000;
+    padding:1px;
+    opacity:0;
+    filter:alpha(opacity=0);
+    white-space:nowrap;
+    overflow:hidden;
+}
+.jsg-previewzoom a{float:right !important; margin-right:5px;}
+.jsg-previewzoom img{float:left; clear:both; display:block; margin-top:4px; margin-left:3px;}

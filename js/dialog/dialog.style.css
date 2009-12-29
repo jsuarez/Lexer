@@ -1,0 +1,32 @@
+/* CSS Document */
+
+.my_dialog{
+	position:absolute;
+	background-color:#FFFFCC;
+	background:#FFFFCC;
+	border:1px solid #D4D5AA;
+	_width:150px;
+	min-width:150px;
+	max-width:280px;
+	height:auto;
+	padding-left:10px;
+	padding-top:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	color:#000000;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	z-index:200;
+	margin-top:4px;
+}
+	.my_dialog .arrow{
+		background:url(arrow.png) no-repeat;
+		position:relative;
+		float:left;
+		width:12px;
+		height:10px;
+		margin-left:5px;
+		margin-top:-15px;
+		z-index:201;
+	}

@@ -1,0 +1,1 @@
+	<p>Copyright &copy; 2009 - Todos los derechos reservados - <a href="politicas-de-privacidad.php">Terminos y Condiciones</a> - <a href="politicas-de-privacidad.php">Politicas de Privacidad</a> - Dise&ntilde;o y Desarrollo <a href="www.mydesign.com.ar" target="_blank">MyDesign.com.ar</a></p>

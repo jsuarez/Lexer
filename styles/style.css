@@ -1,0 +1,1057 @@
+@charset "utf-8";
+/* CSS Document */
+
+.left{float:left !important;}
+.right{float:right !important;}
+
+a img{border:none !important;}
+
+#div1{
+	background:url(../images/inicio.jpg) no-repeat;
+	width:676px;
+	height:430px;
+	margin:0px auto;	
+}
+
+body  {
+	font-family:Calibri;
+	background: url(../images/background.jpg) top left repeat-x #066CAA;
+	margin: 0 auto; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+	padding: 0;
+	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+}
+
+    #container { 
+    	width: 1016px;  /* el uso de 20px menos que un ancho completo de 800px da cabida a los bordes del navegador y evita la aparición de una barra de desplazamiento horizontal */
+    	margin: 0 auto; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+    	text-align: left; /* esto anula text-align: center en el elemento body. */
+    } 
+	
+/*----------Inicio Header----------*/
+	
+    #header { 
+    	padding: 0 10px 0 20px;  /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen bajo él. Si se utiliza una imagen en el #header en lugar de texto, es posible que le interese quitar el relleno. */
+    } 
+	#top{
+		background:url(../images/top1.png) top left no-repeat;
+		position:relative;
+		margin-left:-10px;
+		padding-left:20px;
+		width:1000px;
+		height:50px;
+	}
+	.topmenu-top{
+		position:relative;
+		float:left;
+		width:300px;
+		margin-top:-10px;
+		margin-left:-20px;
+	}
+	.topmenu-top li{
+		display:inline;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.topmenu-top a{
+		color:#FFFFFF;
+		text-decoration:none;
+	}
+	.login{
+		position:relative;
+		float: right;
+		padding-top:3px;
+		width:600px;
+		color:#FFFFFF;
+		font-style:italic;
+		margin-right:50px;
+	}
+		.login .input{
+			width:140px;
+			margin-right:10px;
+			background: url(../images/backsearch.png) no-repeat;
+			border:0px;
+			font-style:italic;
+			padding-top:6px;
+			padding-bottom:5px;
+			padding-left:5px;
+			padding-right:5px;
+		}
+		.login #login{
+			background:url(../images/login.png) top left no-repeat;
+			border:0px;
+			padding:4px;
+			color:#FFFFFF;
+			width:56px;
+			text-align:center;
+		}
+		.login form{float:right; position:relative;}
+		
+		.login-opcional{
+			position:relative;
+			float:right;
+			margin-top:4px;
+			margin-left:10px;
+			font-size:80%;			
+		}
+			.login-opcional a{
+				color:#FFFFFF;
+				text-decoration:none;
+			}
+			.login-opcional a:hover{
+				color:#FFFFFF;
+				text-decoration:underline;
+			}
+		.login .username{float:left; margin-right:15px;}
+			
+	#logo{
+		width:320px;
+		height:150px;
+		position:relative;
+		float:left;
+		margin-left:40px;
+	}
+	#bannertop{
+		position:relative;
+		float:right;
+		margin-right:25px;
+	}
+	#topmenu{
+		position:relative;
+		float:right;
+		width:1016px;
+		height:50px;
+		margin-top:-60px;
+		margin-right:-10px;
+		background:url(../images/topmenu1.png) top right no-repeat;
+		z-index:10;
+	}
+	#topmenu ul{
+		margin-right:45px;
+	}
+	#topmenu li{
+		display:inline;
+		float:right;
+		margin-top:-16px;
+		list-style-type: none;
+	}
+	#topmenu li:hover{
+		display:inline;
+		color:#000000;
+	}
+	#topmenu a{
+		color:#FFFFFF;
+		text-decoration:none;
+	}
+	#topmenu a:hover{
+		color:#000000;
+		text-decoration:none;
+		background:url(../images/backmenu.png) top left repeat-x;
+	}
+	#search{
+		margin-top:130px;
+		margin-left:3px;
+		background:url(../images/barrasearch.png) top left no-repeat;
+		position:relative;
+		height:72px;
+		z-index:20;
+		padding-top:23px;
+		padding-left:40px;
+	}
+	#search2{
+		margin-top:130px;
+		margin-left:3px;
+		position:relative;
+		height:72px;
+		z-index:20;
+		padding-top:23px;
+		padding-left:40px;
+	}
+	#advanced_search_slider{
+		position:relative;
+		left:10px;
+		top:40px;
+		border:1px red solid;
+		background-color:#FFFFFF;
+		width:600px;
+		height:100px;
+	}
+		#search input{
+			width:140px;
+			margin-right:25px;
+			background: url(../images/backsearch.png) no-repeat;
+			border:0px;
+			padding-top:6px;
+			padding-bottom:5px;
+			padding-left:5px;
+			padding-right:5px;
+		}
+		#search select{
+			width:150px;
+			margin-right:25px;
+			background: url(../images/backsearch.png) no-repeat;
+			border:0px;
+			padding-top:5px;
+			padding-bottom:4px;
+			padding-left:5px;
+			padding-right:5px;
+		}
+		#search .buscar{
+			width:100px;
+			margin-right:20px;
+			font-style:italic;
+			color:#FFFFFF;
+			font-size:100%;
+			font-weight:bold;
+			background:none;
+			border:0px;
+			padding-top:0px;
+			padding-bottom:5px;
+			padding-left:0px;
+			padding-right:5px;
+		}
+	.advanced_search_button{
+		position:relative;
+		height:22px;
+		width:952px;
+		border:1px solid;
+		z-index:19;
+	}
+
+		
+	#advanced_search{
+		position:absolute;
+		margin-top:-40px;
+		margin-left:13px;
+		height:auto;/*esta es la altura del div de la busqueda avanzada*/
+		/*height:22px;*/
+		width:950px;
+		z-index:19;
+		/*border:1px solid;*/
+	}
+            #advanced_search select{
+				width:150px;
+				margin-right:25px;
+				background: url(../images/backsearch.png) no-repeat;
+				border:0px;
+				padding-top:5px;
+				padding-bottom:4px;
+				padding-left:5px;
+				padding-right:5px;
+            }
+
+            #advanced_search .fields_advanced_search{
+                    height:0px;
+                    padding:25px 0 0 30px;
+                    background:#151719;
+                    margin-top:0px;/*si height = 0, marging-top debe ser igual a -32px*/
+                    border-left:1px solid #151719;
+                    border-right:1px solid #151719;
+                    overflow:hidden;
+					color:#FFFFFF;
+            }
+		#advanced_search .button_search{
+			position:relative;
+			width:950px;
+			height:22px;
+			padding-top:13px;
+			background: url(../images/busquedaavanzada.png) bottom center no-repeat;
+			text-align:center;
+		}
+			#advanced_search .button_search a{
+				font-style:italic;
+				font-weight:normal;
+				text-decoration:none;
+				color: #FFFFFF;
+				z-index:1000;
+				margin-left:-45px;
+                                
+                                position:relative;
+                                height:30px;
+			}
+			
+    #header h1 {
+    	margin: 0; /* el ajuste en cero del margen del último elemento del div de #header evita la contracción del margen (un espacio inexplicable entre divs). Si el div tiene un borde alrededor, esto no es necesario, ya que también evita la contracción del margen */
+    	padding: 10px 0; /* el uso de relleno en lugar de margen le permitirá mantener el elemento alejado de los bordes del div */
+    }
+	
+/*----------Fin Header----------*/
+
+
+/*----------Inicio Menu Derecha----------*/
+    #sidebar1 {
+    	float:right;
+		width:200px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+		margin-top:60px;
+		padding-bottom:10px;
+		background:#C0C0C0;
+		z-index:100;
+    }
+	#sidebar1 h3{
+		background:url(../images/righttitle.png) top left no-repeat;
+		color:#FFFFFF;
+		height:40px;
+		margin-top:-30px;
+		padding-top:5px;
+		padding-left:10px;
+		width:220px;
+		margin-left:-10px;
+		font-style:italic;
+    }
+	#sidebar1 ul{
+		margin-top:-20px;
+    }
+	#sidebar1 li{
+		list-style:none;
+		padding-top:5px;
+		padding-bottom:5px;
+		padding-left:5px;
+		border-bottom:1px dashed #000000;
+		margin-left:-35px;
+    }
+	#sidebar1 li a{
+		text-decoration:none;
+		color:#000000;
+    }
+	#sidebar1 li:hover{
+		text-decoration:none;
+		color:#000000;
+		padding-top:5px;
+		padding-bottom:5px;
+		padding-left:5px;
+		background:url(../images/backright.jpg) top left repeat-x;
+    }
+	#banner-right{
+		padding-bottom:10px;
+	}
+/*----------Fin Menu Derecha----------*/
+
+/*----------Inicio Contenido----------*/
+    #mainContent {
+		margin-right:250px;
+		margin-top:-85px;
+		padding-left:40px;
+		padding-top:50px;
+		padding-right:25px;
+		width:950px;
+		height:100%;
+		background:url(../images/backpage.png) top left repeat-y;
+		position:relative;
+    } 
+	.column_left{
+		float:left;
+		width:670px;
+	}
+	.column_right{
+		float:right;
+		width:230px;
+		margin-right:6px;
+	}
+	
+	#banner-centro{
+		float:left;
+		height:100px;
+		margin-top:30px;
+		margin-bottom:10px;
+		margin-left:10px;
+	}
+	.user-menu{
+		height:80px;
+		margin-top:30px;
+		margin-bottom:10px;
+		margin-left:0px;
+		font-size:16px;
+		font-weight:bold;
+		border-bottom:3px solid #2D3742;
+		width:520px;
+	}
+	.user-menu li{
+		list-style:none;
+		display:inline;
+	}
+	.user-menu a{
+		text-decoration:none;
+		color:#2D3742;
+	}
+	.tab1{
+		display:inline;
+		list-style:none;
+		font-size:14px;
+		font-weight:normal;
+		height:10px;
+		overflow:hidden;
+		position:absolute;
+		left:38px;
+		margin-top:-22px;
+	}
+		.tab1 li{
+			list-style:none;
+			display:inline;
+			float:left;
+		}
+		.tab1 a{
+			text-decoration:none;
+			color:#2D3742;
+		}
+		
+	.anunciante{
+		margin-top:10px;
+		padding:5px;
+		width:600px;
+		height:120px;
+		position:relative;
+		border-bottom:1px dashed #333333;
+	}
+	.imganunciante{
+		position:relative;
+		float:left;
+		padding:5px;
+		width:100px;
+		height:100px;
+	}
+	.datosanunciante{
+		padding-left:110px;
+		margin-top:0px;
+		width:500px;
+		font-style:italic;
+		font-size:90%;
+	}
+		.datosanunciante_list{
+			height:100px;
+			width:160px;
+			font-style:italic;
+			font-size:90%;
+			float:left;
+		}
+                    .datosanunciante_list span{font-weight:bold;}
+
+
+            .datosanunciante h3{
+                    font-style:normal;
+                    font-size: large;
+                    margin-bottom:5px;
+            }
+	.masinfo{
+		position:relative;
+		float:right;
+		font-size:90%;
+		color:#000000;
+		font-weight:bold;
+		background:url(../images/masinfo.png);
+		padding-top:2px;
+		padding-bottom:2px;
+		padding-left:7px;
+		padding-right:7px;
+		border:0;
+	}
+		.masinfo a{
+			text-decoration:none;
+			color:#FFFFFF;
+		}
+	#paginacion a:hover{
+		background:url(../images/paginacion-hover.jpg) no-repeat;
+		padding-left:5px;
+		padding-right:5px;
+		padding-bottom:5px;
+		color:#000000;
+	}
+	#resultsearch{
+		float:left;
+		width:100%;
+	}
+	.paginacion{
+		float:left;
+		width:100%;
+		padding-left:10px;
+		font-style:italic;
+	}
+		.paginacion a{
+			background:url(../images/paginacion.jpg) no-repeat;
+			padding-left:5px;
+			padding-right:5px;
+			padding-bottom:5px;
+			text-decoration:none;
+			color:#FFFFFF;
+		}
+/*----------Fin Contenido----------*/
+
+
+
+/*----------Inicio Formularios----------*/
+.contact_form{
+	position:relative;
+	margin-top:10px;
+	padding:5px;
+	width:600px;
+	height:120px;
+}
+
+.contact_form .container_contact{
+	list-style-type:none;
+	margin-top:5p;
+	margin-left:0px;
+	padding:0px;
+	float:left;
+	width:500px;
+}
+	.contact_form .container_contact li{
+		display:list-item;
+		float:left;
+		width:100%;
+		text-align:left;
+		margin-bottom:10px;
+		font-size:14px;
+	}
+		.contact_form .container_contact li .cell{
+			float:left;
+			width:120px;
+			overflow:hidden;
+			white-space:nowrap;
+		}
+		.contact_form .container_contact li input{
+			float:left;
+			width:300px;
+		}
+		.contact_form .container_contact li textarea{
+			float:left;
+			width:370px;
+		}
+		.contact_form .container_contact li .button{
+			width:100px;
+		}
+		.contact_form .container_contact li .legend{
+			margin-top:5px;
+			font-size:14px;
+		}
+	.contact_form .message{
+		font-size:18px;
+		text-align:center;
+		margin-top:100px;
+	}		
+/*----------Fin Formularios----------*/
+
+/*----------Inicio Pie----------*/
+    #footer { 
+    	padding: 25px 10px 10px 40px; /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen por encima de él. */
+    	background: url(../images/pie.png) top left no-repeat;
+		margin-left:-1px;
+    } 
+    #footer p {
+    	margin: 0; /* el ajuste en cero de los márgenes del primer elemento del pie evitará que puedan contraerse los márgenes (un espacio entre divs) */
+    	padding: 10px 0; /* el relleno de este elemento creará espacio, de la misma forma que lo haría el margen, sin el problema de la contracción de márgenes */
+    }
+	#footer a{
+	text-decoration:none;
+	color:#FFFFFF;
+	}
+/*----------Fin Pie----------*/
+
+/*---------------Inicio Registro---------------*/
+.registry{
+	position:relative;
+	float:left;
+	width:680px;
+}
+	.registry .div_combo{
+		position:relative;
+		float:left;
+	}
+		.registry .div_combo span{float:left;margin-right:5px;}
+		.registry .div_combo select{float:left;}
+	.registry #form_registry{
+		position:relative;
+		float:left;
+		width:100%;
+		margin-top:10px;
+	}
+
+	.registry #form_registry ul{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+		width:100%;
+		float:left;
+	}
+		.registry #form_registry ul li{
+			display:list-item;
+			text-align:left;
+			width:100%;
+			height:auto;
+			margin-bottom:5px;
+			float:left;
+		}
+			.registry #form_registry ul li .cell1{float:left; height:100%;}
+			.registry #form_registry ul li .cell2{float:left; height:100%;}
+			.registry #form_registry ul li input{float:left;}
+			.registry #form_registry ul li select{float:left;}
+			.registry #form_registry ul li span{float:left;}			
+			
+	.registry .buttonRegister{
+		float:left;
+		width:100%;
+		margin-top:10px;
+		text-align:center;
+	}
+	
+	
+/*----------Fin Registro----------*/
+
+/*----------------- Inicio formulario -------------------*/
+.registry #form_registry .form{
+	margin-top:8px;
+	margin-bottom:20px;
+}
+.registry #form_registry .form .cell1{width:200px;}
+.registry #form_registry .form .cell2{width:450px; white-space:nowrap; overflow:hidden; float:left;}
+.registry #form_registry .form .inputbox{float:left; width:270px;}
+
+.registry #form_registry .form .inputpref1{width:45px; margin-right:5px;}
+.registry #form_registry .form .inputpref2{width:45px; margin-right:5px;}
+.registry #form_registry .form .inputnum{width:100px;}
+.registry #form_registry .form .age{width:50px; text-align:center}
+.registry #form_registry .form .inputnac{width:120px; margin-right:6px;}
+.registry #form_registry .form .inputsmall{width:150px; clear:left; margin-bottom:4px;}
+.registry #form_registry .form .inputcatcha{width:171px; margin-top:5px;}
+
+.registry #form_registry .form .list{width:490px;}
+	.registry #form_registry .form .list li{width:100%;}
+.registry #form_registry .form .button_attach{margin-top:2px; float:left; width:350px; margin-bottom:5px;}
+
+.registry #form_registry .form .container_list1{float:left;}
+.registry #form_registry .form .container_list2{position:absolute; margin-left:178px; width:405px;}
+.registry #form_registry .form .list_sports{width:150px; height:100px;}
+
+.registry #form_registry .form .col1{width:120px; float:left;}
+.registry #form_registry .form .input_range_year{width:50px; text-align:center;}
+.registry #form_registry .form .list_lesions1{width:330px; height:60px; margin-bottom:5px;}
+.registry #form_registry .form .list_lesions2{width:210px;}
+.registry #form_registry .form .list_recuperation{width:210px;}
+.registry #form_registry .form .buttons{float:left; text-align:center; width:330px; margin-bottom:5px;}
+	.registry #form_registry .form .buttons input{display:block;margin-right:5px;}
+.registry #form_registry .form .container_errors{float:left; position:absolute; width:250px; margin-left:328px; overflow:hidden;}
+
+.registry #form_registry .form .container_icons{float:left; margin-left:5px;}
+	.registry #form_registry .form .container_icons a{margin-right:2px;}
+	
+.registry #form_registry .form #cont_lesion_textarea{float:left;}
+	.registry #form_registry .form #cont_lesion_textarea input{width:210px;}
+	
+	
+.registry #form_registry .form .panel{
+	float:left;
+	width:25px;
+	padding:0px;
+	padding-left:5px;
+	padding-right:0px;
+	margin-top:28px;
+}
+	.registry #form_registry .form .list_sports .panel li{
+		list-style-type:none; 
+		display:list-item;
+		margin:0px; 
+		text-align:center;
+	}
+		.registry #form_registry .form .list_sports .panel li a{float:left; padding:5px;}
+		.registry #form_registry .form .list_sports .panel li a:hover{border:1px solid #CCCCCC;}
+		
+/*----------Fin formulario ----------*/
+
+
+
+
+
+    .fltrt { /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+    	float: right;
+    	margin-left: 8px;
+    }
+    .fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. */
+    	float: left;
+    	margin-right: 8px;
+    }
+    .clearfloat { /* esta clase debe colocarse en un elemento div o break y debe ser el último elemento antes del cierre de un contenedor que incluya completamente a un elemento flotante */
+    	clear:both;
+        height:0;
+        font-size: 1px;
+        line-height: 0px;
+    }
+
+	.required{
+		font-size:14px;
+		font-weight:bold;
+		padding-right:5px;
+		color: #FF0000;
+	}
+	
+	.inputbox{
+		background:url(../images/back_form1.png) repeat-x;
+		background-color:#F4F5F7;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-weight:normal;
+		color:#002D3C;
+		padding-top:2px;
+		padding-bottom:2px;		
+	}
+	.input{
+		width:140px;
+		margin-right:25px;
+		background: url(../images/backsearch.png);
+		border:0px;
+		padding-top:6px;
+		padding-bottom:5px;
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+.window_loading{
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:404px;
+	margin-left:-202px;
+	z-index:2001;
+	background:none;
+}
+	.window_loading .top{
+		float:left;
+		background:url(../images/window_border_top.png) no-repeat;
+		width:403px;
+		height:14px;
+		margin-left:-10px;
+	}
+	.window_loading .content{
+		float:left;
+		width:382px;
+		height:100px;
+		background:#BDC1C4;
+	}
+		.window_loading .content .bLeft{
+			position:relative;
+			float:left;
+			background:url(../images/window_border_left.png) repeat-y;
+			width:9px;
+			height:100%;
+			left:-9px;
+		}
+		.window_loading .content .message{
+			float:left;
+			position:relative;
+			padding:0px;
+			margin:0px;
+			text-align:center;
+			width:362px;
+			clear:none;
+		}
+		.window_loading .content .bRight{
+			position:relative;
+			float:right;
+			background:url(../images/window_border_right.png) repeat-y;
+			width:9px;
+			height:100%;
+			right:-9px;
+		}		
+		
+	.window_loading .bottom{
+		float:left;
+		background:url(../images/window_border_bottom.png) no-repeat;
+		width:403px;
+		height:12px;
+		margin-left:-10px;
+	}
+
+
+.progress{
+	float:left;
+	background:url(../images/ajax-loader.gif) no-repeat;
+	width:16px;
+	height:16px;
+	margin-left:5px;
+	margin-top:3px;
+	display:none;
+}
+
+.label_filename{
+	float:left;
+	color:#000000;
+	margin-top:3px;
+	margin-left:10px;
+	font-size:14px;
+	display:none;
+	width:190px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+/*------------ Dialog Box (Recordar Contraseña) ---------------*/
+.dialogbox{
+	background:url(../images/forum1.png) no-repeat;	
+	width:319px;
+	height:176px;
+	position:absolute;
+	left:-200px;
+	z-index:2001;
+}
+	.dialogbox #content_form{
+		float:left;
+		position:relative;
+		display:none;
+		margin-top:53px;
+		font-size:14px;
+		padding-left:13px;
+	}	
+		.dialogbox #content_form .title{float:left;width:290px;}
+		.dialogbox #content_form ul{
+			float:left;
+			margin:0px;
+			padding:0px;
+			list-style-type:none;
+			text-align:left;
+		}
+			.dialogbox #content_form li{
+				display:inline;
+				float:left;
+				margin:0px;				
+				padding:0px;
+				text-align:left;
+			}	
+			.dialogbox #content_form ul .cell1{padding-right:5px; }
+
+		.dialogbox #content_form .buttonsend{
+			float:left;
+			width:100%;
+			text-align:center;
+			padding-top:6px;
+		}	
+			.dialogbox #content_form .buttonsend input{width:70px;font-size:12px;}
+/*------------------------------ FIN Dialog Box --------------------------------*/
+
+/*---------------- FOTOS (PANEL) ---------------*/
+.container_combo{
+	float:left;
+	width:680px;
+	padding:10px;
+	border:1px solid #CCCCCC;
+	background-color:#EEEEEE;
+	font-size:14px;
+}
+	.cell_left{float:left;}
+	.cell_right{float:right; font-weight:normal;}
+		.cell_right a{color:#FF0000; text-decoration:none;}
+
+.image_message{
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+}
+/*------------------- END ----------------------*/
+
+/*---------------- VIDEOS (PANEL) ---------------*/
+.movies{
+	float:left;
+}
+	.movies li{
+		list-style-type:none;
+	}
+	.movies .header{
+		float:left;
+		width:300px;
+		/*border:1px solid;*/
+		font-weight:bold;
+		text-align:left;
+	}
+		.movies .header .cell1{
+			float:left !important;
+			width:300px !important;
+		}
+		.movies .header .cell2{
+			float:right !important;
+			width:100px;
+		}
+
+	.movies .body{
+		float:left;
+		width:300px;
+		text-align:left;
+		/*border:1px solid;*/
+	}
+		.movies .body .row{
+			width:100%;
+			float:left;
+		}
+			.movies .body  .row .cell1{
+				float:left;
+				width:300px;
+			}
+			.movies .body  .row .cell2{
+				float:right !important;
+				width:100px;
+				text-align:left;
+			}
+/*------------------- END ----------------------*/
+
+
+
+#progress{
+	position:relative;
+	width:105px;
+	border:2px solid #262E36;
+	padding:5px 5px 2px 5px;
+	margin-top:20px;
+	display:none;
+}
+
+.styleDisplayNone{display:none !important;}
+.styleContTag{float:left; display:none; margin-left:5px;}
+
+.link1,
+.link:link{
+	font-size:12px;
+	font-weight:normal;
+	text-decoration:none;
+}
+.link1 .slink{margin-left:5px;}
+.link1:hover{
+	text-decoration:none !important;
+	color:#0000FF;
+}
+.combo{
+	background-color:#D0D8C9;
+	color:#333333;
+}
+	.combo option{padding-right:10px;}
+
+.field_gallery{
+	float:left;
+	width:600px;
+	border:1px solid #CCCCCC;
+	margin-top:10px;
+}
+	.field_gallery legend{
+		font-size:12px;
+		font-weight:bold;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+	}
+
+#conteiner_table{
+float:left;
+overflow:auto;
+width:100%;
+}
+/*============================Inicio Curriculum View===============================*/
+
+#curriculum_view{
+        display:block;
+}
+	#curriculum_view_left{
+            float: left;
+            width:250px;
+	}
+		#curriculum_view_left .curriculum_pictures{
+                    float:left;
+                    margin-bottom:10px;
+		}
+			#curriculum_view_left .curriculum_pictures .picture_medium{
+                            float:left;
+                            width:100%;
+                            height:160px;
+                            text-align:center;
+			}
+                            #curriculum_view_left .curriculum_pictures .picture_medium a{
+                                display:inline-block;
+                                position:relative;
+                                border:2px solid #3CA3CB;
+                                padding:3px;
+                            }
+			#curriculum_view_left .curriculum_pictures .picture_thumb{
+                            float:left;
+                            width:100%;
+			}
+		#curriculum_view_left .curriculum_contact{
+                    float:left;
+                    width:100%;
+                    height:150px;
+                    border:1px solid #000000;
+		}
+	#curriculum_view_right{
+            float: right;
+            width:400px;
+            border:1px solid #000000;
+	}
+		.curriculum_tabs{
+			border:1px solid #000000;
+		}
+                    .curriculum_tabs ul{
+                        margin-top:5px;
+                        padding:0;
+                        list-style-type:none;
+                    }
+                        .curriculum_tabs ul li{
+                            display:inline;
+                            margin:0;
+                            border-right:1px solid #000;
+                        }
+                            .curriculum_tabs ul li a{
+                                padding:5px;
+                                background-color:#fff;
+                                text-decoration:none;
+                            }
+
+		.curriculum_content{
+		}
+
+/*============================Fin Curriculum View=============================*/
+
+
+/*===========================Diapositiva Imagenes=============================*/
+.picture_thumb .arrow{
+    width:18px;
+    height:54px;
+    text-align:center;
+    background-color:#cccccc;
+}
+    .picture_thumb a{
+        display:block !important;
+    }
+.picture_thumb .container-thumbs{
+    float:left;
+    width:206px;
+    padding:2px;
+    text-align:left;
+    overflow:hidden;
+    white-space:nowrap;
+    /*border:1px solid red;*/
+}
+    .picture_thumb .container-thumbs ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        margin-left:0px;
+    }
+        .picture_thumb .container-thumbs li{
+            display:inline-block;
+            margin-right:5px;
+        }
+    .picture_thumb .container-thumbs a{
+        padding:2px;
+        border:1px solid #ffffff;
+    }
+    .picture_thumb .container-thumbs a:hover{
+        border:1px solid #cccccc;
+    }
+/*=========================FIN Diapositiva Imagenes===========================*/
+
+.ajax-picture-loader{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:100;
+    background:url(../images/ajax-loader2.gif) no-repeat center #fff;
+    display:none;
+}

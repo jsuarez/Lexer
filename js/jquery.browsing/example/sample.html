@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Browsing</title>
+
+<script type="text/javascript" src="../../jquery-1.3.2.min.js"></script>
+
+<!--SCRIPT BROWSING (PAGINADOR)-->
+<script type="text/javascript" src="../js/jquery.browsing.js"></script>
+<script type="text/javascript">
+<!--
+var Browsing = new Class_Browsing({
+	container: '.container',
+	basename: 'http://localhost/componentes/jquery/jquery.browsing/',
+	include_result: 'componentes/jquery/jquery.browsing/example/result.php',
+	orderby: 'name',
+	callback : function(index_page, count_page, count_reg){
+		$("#b_IndexPage")[0].innerHTML = index_page;
+		$("#b_CountPage")[0].innerHTML = count_page;
+	}
+});
+-->
+</script>
+<!--END SCRIPT-->
+
+<style type="text/css">
+.container{
+	position:relative;
+	width:600px;
+	border:2px solid #CCCCCC;
+	margin:auto;
+	padding:5px;
+}
+.browser{
+	width:600px;
+	margin:auto;
+	padding-top:5px;
+}
+	.browser .col1{float:left;}
+	.browser .col2{float:left; margin-left:100px;}
+	.browser .col3{float:right;}
+.div_orderby{
+	position:relative;
+	width:600px;
+	margin:auto;
+	padding-bottom:5px;
+	text-align:right;
+}
+</style>
+</head>
+
+<body>
+
+<div class="div_orderby">
+	Ordenar por&nbsp;
+	<select onchange="Browsing.set_orderby(this.value)">
+	<option value="name">Nombre</option>
+	<option value="username">Usuario</option>
+	<option value="pass">Password</option>
+	<option value="email">Email</option>
+	</select>
+</div>
+<div class="container"></div>
+<div class="browser">
+	<div class="col1">
+		<select onchange="Browsing.set_count_entries(this.value);">
+		<option value="5">5</option>
+		<option value="10" selected="selected">10</option>
+		<option value="20">20</option>
+		<option value="50">50</option>
+		<option value="100">100</option>
+		</select>&nbsp;Entradas por p&aacute;ginas
+	</div>
+
+	<div class="col2">
+		<a href="#" onclick="Browsing.page_first(); return false;"><img src="img/first.gif" alt="Primer P&aacute;gina" title="" border="0" /></a>
+		<a href="#" onclick="Browsing.page_back(); return false;"><img src="img/previous.gif" alt="P&aacute;gina Anterior" title="" border="0" /></a>
+		<a href="#" onclick="Browsing.page_next(); return false;"><img src="img/next.gif" alt="Siguiente P&aacute;gina" title="" border="0" /></a>
+		<a href="#" onclick="Browsing.page_last(); return false;"><img src="img/last.gif" alt="Ultima P&aacute;gina" title="" border="0" /></a>
+	</div>
+	
+	<div class="col3">
+		P&aacute;gina <b id="b_IndexPage"></b> de <b id="b_CountPage"></b>
+	</div>	
+</div><!--end .browser-->
+
+</body>
+</html>

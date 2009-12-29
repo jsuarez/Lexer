@@ -1,0 +1,58 @@
+/* CSS Document */
+
+
+/*-------------------- FORMULARIO: Login ----------------------*/
+.formError_Login{
+	position:absolute;
+	padding-top:8px;
+	display:none;
+	z-index:5000;
+}
+	.formError_Login .formErrorContent{
+		width:100%; 
+		background:#ee0101;
+		color:#fff;
+		width:150px;
+		font-family:tahoma;
+		font-size:11px;
+		border:2px solid #ddd;
+		padding:4px 10px 4px 10px;
+		text-align:left;
+	}
+	.formError_Login .formErrorArrow_bottom{
+		background:url(../images/arrow_up.png) no-repeat;
+		position:absolute;
+		left:20px;
+		top:0px;
+		width:15px;
+		height:9px;
+	}
+
+
+/*-------------------------- FORMULARIO: Solicitar Informacion -------------------------------*/
+.formError_Right{
+	position:absolute;
+	padding-left:8px;
+	margin-top:70px;
+	display:none;
+	z-index:5000;
+}
+	.formError_Right .formErrorContent{
+		width:100%; 
+		background:#0289C1;
+		color:#fff;
+		width:150px;
+		font-family:tahoma;
+		font-size:11px;
+		/*border:2px solid #ddd;*/
+		padding:4px 10px 4px 10px;
+		text-align:left;
+	}
+	.formError_Right .formErrorArrow_right{
+		background:url(../images/arrow_left.png) no-repeat;
+		position:absolute;
+		left:0px;
+		top:3px;
+		width:9px;
+		height:15px;
+	}

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin t&iacute;tulo</title>
+
+<style type="text/css">
+	h2	{clear:both;padding-top:20px;}
+	ul {list-style:none;margin:0;padding:0;}
+	li {float:left;width:100px;margin:0;padding:0;text-align:center;}
+	li a {display:block;padding:5px 10px;height:100%;color:#FFF;text-decoration:none;border-right:1px solid #FFF;}
+	li a {background:url(bg2.jpg) repeat 0 0;}
+	li a:hover, li a:focus, li a:active {background-position:-150px 0;}
+	#a a {background:url(bg.jpg) repeat -20px 35px;}
+	#b a {background:url(bg2.jpg) repeat 0 0;}
+	#c a {background:url(bg3.jpg) repeat 0 0;}
+	#d a {background:url(bg4.jpg) repeat 0 0;}
+</style>
+
+<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="jquery.bgpos.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$('#a a')
+		.css( {backgroundPosition: "-20px 35px"} )
+		.mouseover(function(){
+			$(this).stop().animate({backgroundPosition:"(-20px 94px)"}, {duration:500})
+		})
+		.mouseout(function(){
+			$(this).stop().animate({backgroundPosition:"(40px 35px)"}, {duration:200, complete:function(){
+				$(this).css({backgroundPosition: "-20px 35px"})
+			}})
+		})
+	$('#b a')
+		.css( {backgroundPosition: "0 0"} )
+		.mouseover(function(){
+			$(this).stop().animate({backgroundPosition:"(-150px 0)"}, {duration:500})
+		})
+		.mouseout(function(){
+			$(this).stop().animate({backgroundPosition:"(-300px 0)"}, {duration:200, complete:function(){
+				$(this).css({backgroundPosition: "0 0"})
+			}})
+		})
+	$('#c a')
+		.css( {backgroundPosition: "0 0"} )
+		.mouseover(function(){
+			$(this).stop().animate({backgroundPosition:"(0 -250px)"}, {duration:500})
+		})
+		.mouseout(function(){
+			$(this).stop().animate({backgroundPosition:"(0 0)"}, {duration:500})
+		})
+	$('#d a')
+		.css( {backgroundPosition: "0 0"} )
+		.mouseover(function(){
+			$(this).stop().animate({backgroundPosition:"(0 -250px)"}, {duration:500})
+		})
+		.mouseout(function(){
+			$(this).stop().animate({backgroundPosition:"(0 0)"}, {duration:500})
+		})
+});
+</script>
+
+
+</head>
+
+<body>
+</body>
+</html>

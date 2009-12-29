@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Validador</title>
+
+<!--COMPONENETE PARA VALIDAR CAMPOS-->
+<link href="validator.style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="validator.script.js"></script>
+<script type="text/javascript">
+var Validator = new ClassValidator('#form .inputbox', true);
+	Validator.validateOne = true;
+</script>
+<!--END SCRIPT-->
+
+<style type="text/css">
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+#form{
+	float:left;
+	position:relative;
+	width:600px;
+	padding:10px;
+	margin-top:100px;
+}
+	#form .cell{
+		float:left;
+		width:100%;
+		margin-bottom:10px;
+	}
+
+.inputbox{
+	float:left;
+	clear:left;
+	border:1px solid #CCCCCC;
+	padding:2px;
+	color:#0000CC;
+	width:200px;
+}
+
+button{
+	float:left;
+	clear:left;
+	width:100px;
+	height:22px;
+	margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="form">
+	<div class="cell"><input type="password" id="pass" class="inputbox" validator="required:true" /></div>
+	<div class="cell"><input type="password" id="passconfirm" class="inputbox" validator="required:true" /></div>    
+</div>
+
+<br /><br />
+<p><button onclick="Validator.validate();">Validar/button</p>
+
+<br />
+
+</body>
+</html>

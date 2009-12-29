@@ -1,0 +1,360 @@
+@charset "utf-8";
+/* CSS Document */
+
+body  {
+		font-family:Calibri;
+    	background: url(../images/background.jpg) top left repeat-x #066CAA;
+    	margin: 0 auto; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+    	padding: 0;
+    	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+    	color: #000000;
+    }
+    #container { 
+    	width: 1016px;  /* el uso de 20px menos que un ancho completo de 800px da cabida a los bordes del navegador y evita la aparición de una barra de desplazamiento horizontal */
+    	margin: 0 auto; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+    	text-align: left; /* esto anula text-align: center en el elemento body. */
+    } 
+	
+/*----------Inicio Header----------*/
+	
+    #header { 
+    	padding: 0 10px 0 20px;  /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen bajo él. Si se utiliza una imagen en el #header en lugar de texto, es posible que le interese quitar el relleno. */
+    } 
+	#top{
+	background:url(../images/top1.png) top left no-repeat;
+	position:relative;
+	margin-left:-10px;
+	padding-left:20px;
+	width:1000px;
+	height:50px;
+	}
+	.topmenu-top{
+	position:relative;
+	float:left;
+	width:300px;
+	margin-top:-10px;
+	margin-left:-20px;
+	}
+	.topmenu-top li{
+	display:inline;
+	padding-left:10px;
+	padding-right:10px;
+	}
+	.topmenu-top a{
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+	.login{
+	position:relative;
+	padding-top:3px;
+	float: right;
+	width:490px;
+	color:#FFFFFF;
+	font-style:italic;
+	margin:0;
+	}
+	.login input{
+	font-style:italic;
+	width:120px;
+	}
+	.login #login{
+	background:url(../images/login.png) top left no-repeat;
+	border:0px;
+	padding:4px;
+	color:#FFFFFF;
+	width:56px;
+	text-align:center;
+	}
+	.login-opcional{
+	position:relative;
+	float:right;
+	margin-top:-22px;
+	margin-right:40px;
+	font-size:80%;
+	}
+	.login-opcional a{
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+	#logo{
+	width:320px;
+	height:150px;
+	position:relative;
+	float:left;
+	margin-left:40px;
+	}
+	#bannertop{
+	position:relative;
+	float:right;
+	margin-right:25px;
+	}
+	#topmenu{
+	position:relative;
+	float:right;
+	width:1016px;
+	height:50px;
+	margin-top:-60px;
+	margin-right:-10px;
+	background:url(../images/topmenu1.png) top right no-repeat;
+	z-index:10;
+	}
+	#topmenu ul{
+	margin-right:45px;
+	}
+	#topmenu li{
+	display:inline;
+	float:right;
+	margin-top:-16px;
+	list-style-type: none;
+	}
+	#topmenu li:hover{
+	display:inline;
+	color:#000000;
+	}
+	#topmenu a{
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+	#topmenu a:hover{
+	color:#000000;
+	text-decoration:none;
+	background:url(../images/backmenu.png) top left repeat-x;
+	}
+	#search{
+	margin-top:130px;
+	margin-left:3px;
+	background:url(../images/barrasearch.png) top left no-repeat;
+	position:relative;
+	height:72px;
+	z-index:20;
+	padding-top:23px;
+	padding-left:40px;
+	}
+	#search input{
+	width:140px;
+	margin-right:25px;
+	background: url(../images/backsearch.png);
+	border:0px;
+	padding-top:6px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+	}
+	#search select{
+	width:150px;
+	margin-right:25px;
+	background: url(../images/backsearch.png);
+	border:0px;
+	padding-top:5px;
+	padding-bottom:4px;
+	padding-left:5px;
+	padding-right:5px;
+	}
+	#search .buscar{
+	width:100px;
+	margin-right:20px;
+	font-style:italic;
+	color:#FFFFFF;
+	font-size:100%;
+	font-weight:bold;
+	background:none;
+	border:0px;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:0px;
+	padding-right:5px;
+	}
+	#advanced-search{
+	margin-top:-33px;
+	margin-left:15px;
+	background: url(../images/busquedaavanzada.png) bottom left no-repeat;
+	position:relative;
+	z-index:19;
+	height:16px;
+	padding-bottom:5px;
+	padding-left:40px;
+	}
+	#advanced-search h4{
+	text-align:center;
+	color:#FFFFFF;
+	font-style:italic;
+	font-weight:normal;
+	margin-left:-100px;
+	margin-top:-5px;
+	}
+	#advanced-search h4 a{
+	text-decoration:none;
+	color: #FFFFFF;
+	}
+    #header h1 {
+    	margin: 0; /* el ajuste en cero del margen del último elemento del div de #header evita la contracción del margen (un espacio inexplicable entre divs). Si el div tiene un borde alrededor, esto no es necesario, ya que también evita la contracción del margen */
+    	padding: 10px 0; /* el uso de relleno en lugar de margen le permitirá mantener el elemento alejado de los bordes del div */
+    }
+	
+/*----------Fin Header----------*/
+
+
+/*----------Inicio Menu Derecha----------*/
+    #sidebar1 {
+    	float: right; /* dado que este elemento es flotante, debe asignarse un ancho */
+    	width: 200px; /* el ancho real de este div, en navegadores que cumplen los estándares, o el modo de estándares de Internet Explorer, incluirá el relleno y el borde además del ancho */
+ /* el color de fondo se mostrará a lo largo de todo el contenido de la columna, pero no más allá */
+    	padding-left: 10px;
+    	padding-right: 10px;
+		margin-top:40px;
+		margin-right:40px;
+		padding-bottom:10px;
+		background:#C0C0C0;
+    }
+	#sidebar1 h3{
+	background:url(../images/righttitle.png) top left no-repeat;
+	color:#FFFFFF;
+	height:40px;
+	margin-top:-30px;
+	padding-top:5px;
+	padding-left:10px;
+	width:220px;
+	margin-left:-10px;
+	font-style:italic;
+    }
+	#sidebar1 ul{
+	margin-top:-20px;
+    }
+	#sidebar1 li{
+	list-style:none;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	border-bottom:1px dashed #000000;
+	margin-left:-35px;
+    }
+	#sidebar1 li a{
+	text-decoration:none;
+	color:#000000;
+    }
+	#sidebar1 li:hover{
+	text-decoration:none;
+	color:#000000;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	background:url(../images/backright.jpg) top left repeat-x;
+    }
+	#banner-right{
+	padding-bottom:10px;
+	}
+/*----------Fin Menu Derecha----------*/
+
+/*----------Inicio Contenido----------*/
+    #mainContent {
+	margin-right:250px;
+	margin-top:-73px;
+	padding-left:40px;
+	padding-top:50px;
+	width:1016px;
+	background:url(../images/backpage.png) top left repeat-y;
+    } 
+	#banner-centro{
+	height:100px;
+	margin-top:30px;
+	margin-bottom:10px;
+	margin-left:10px;
+	}
+	#anunciante{
+	margin-top:10px;
+	padding:5px;
+	width:600px;
+	height:120px;
+	position:relative;
+	border-bottom:1px dashed #333333;
+	}
+	.imganunciante{
+	position:relative;
+	float:left;
+	padding:5px;
+	width:100px;
+	height:100px;
+	}
+	.datosanunciante{
+	padding-left:110px;
+	margin-top:-20px;
+	width:500px;
+	font-style:italic;
+	font-size:90%;
+	}
+	.datosanunciante h3{
+	font-style:normal;
+	font-size: large;
+	margin-bottom:5px;
+	}
+	.masinfo{
+	position:relative;
+	float:right;
+	font-size:90%;
+	color:#000000;
+	font-weight:bold;
+	background:url(../images/masinfo.png);
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:7px;
+	padding-right:7px;
+	border:0;
+	}
+	.masinfo a{
+	text-decoration:none;
+	color:#FFFFFF;
+	}
+	#paginacion{
+	margin-left:150px;
+	padding-top:10px;
+	font-style:italic;
+	}
+	#paginacion a{
+	background:url(../images/paginacion.jpg) no-repeat;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	text-decoration:none;
+	color:#FFFFFF;
+	}
+	#paginacion a:hover{
+	background:url(../images/paginacion-hover.jpg) no-repeat;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	color:#000000;
+	}
+/*----------Fin Contenido----------*/
+
+
+/*----------Inicio Pie----------*/
+    #footer { 
+    	padding: 25px 10px 10px 40px; /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen por encima de él. */
+    	background: url(../images/pie.png) top left no-repeat;
+		margin-left:-1px;
+    } 
+    #footer p {
+    	margin: 0; /* el ajuste en cero de los márgenes del primer elemento del pie evitará que puedan contraerse los márgenes (un espacio entre divs) */
+    	padding: 10px 0; /* el relleno de este elemento creará espacio, de la misma forma que lo haría el margen, sin el problema de la contracción de márgenes */
+    }
+	#footer a{
+	text-decoration:none;
+	color:#FFFFFF;
+	}
+/*----------Fin Pie----------*/
+
+
+    .fltrt { /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+    	float: right;
+    	margin-left: 8px;
+    }
+    .fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. */
+    	float: left;
+    	margin-right: 8px;
+    }
+    .clearfloat { /* esta clase debe colocarse en un elemento div o break y debe ser el último elemento antes del cierre de un contenedor que incluya completamente a un elemento flotante */
+    	clear:both;
+        height:0;
+        font-size: 1px;
+        line-height: 0px;
+    }
