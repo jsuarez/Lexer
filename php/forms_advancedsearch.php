@@ -1,7 +1,5 @@
 <?php
 function get_form($name){
-
-    echo '<form id="formAdvancedSearch" method="post" action="index.php" enctype="application/x-www-form-urlencoded">';
 	
 	switch(strtolower($name)){
 	case "deportista":?>
@@ -139,5 +137,4 @@ function get_form($name){
 <?php   break;
 	}
 }
-	echo '</form>';
 ?>

@@ -602,9 +602,10 @@ body  {
 .registry #form_registry .form{
 	margin-top:8px;
 	margin-bottom:20px;
+        width:1000px;
 }
 .registry #form_registry .form .cell1{width:200px;}
-.registry #form_registry .form .cell2{width:450px; white-space:nowrap; overflow:hidden; float:left;}
+.registry #form_registry .form .cell2{width:550px; white-space:nowrap; overflow:hidden; float:left;}
 .registry #form_registry .form .inputbox{float:left; width:270px;}
 
 .registry #form_registry .form .inputpref1{width:45px; margin-right:5px;}

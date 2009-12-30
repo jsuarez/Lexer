@@ -289,7 +289,7 @@ function get_html($tag){
 				<div class="cell2">
 					 <img src="js/catcha/securimage_show.php?sid=<? echo md5(uniqid(time()));?>" id="image" align="absmiddle" />
 						<a href="#" onclick="document.getElementById('image').src = 'js/catcha/securimage_show.php?sid=' + Math.random(); return false">Mostrar Otra</a><br />
-						<input type="text" id="code" name="code" class="validator {v_required:true} inputbox inputcatcha" />
+						<input type="text" id="code" name="code" class="inputbox inputcatcha" />
 				</div>
 			</li>	
             <li>

@@ -25,7 +25,7 @@ case "new":
 	$sendmail->subject = REGISTER_SUBJECT;
 	$sendmail->message = sprintf(REGISTER_MESSAGE, md5($coduser));
 	
-	if( $sendmail->send() ){
+	//if( $sendmail->send() ){
 		
 		$sql = "INSERT INTO users_sports (coduser, lastname, firstname, sex, birth, typedoc, typedoc_new, nrodoc, country, province, city, cp, nacionality, nacionality2, nacionality3, passport, phone_pref1, phone_pref2, phone, cel_pref1, cel_pref2, cel, website, `language`, `language2`, `language3`, `language4`, language_level_write, language2_level_write, language3_level_write, language4_level_write, language_level_talk, language2_level_talk, language3_level_talk, language4_level_talk, profession, studies, disability, typedisc, detaildisc) ";
 		
@@ -88,10 +88,10 @@ case "new":
 		$data->query($sql);
 				
 		die("sendmail_ok");
-	}else {
+	//}else {
 		$data->query("DELETE FROM users WHERE coduser=".$coduser);
 		die("sendmail_error");
-	}
+	//}
 			
 break;
 

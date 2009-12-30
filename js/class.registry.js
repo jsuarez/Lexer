@@ -98,8 +98,8 @@ var ClassRegistry = function(){
 
 		var html_sendimages = '<p><img src="images/ajax-loader2.gif" alt="" align="absmiddle" />&nbsp;Subiendo las im&aacute;genes.</p>';
 		
-		Validator.validate(function(error){
-			if( !error ){
+		Validator.validate(function(error, elem){
+			if( error ){
 				Progress.show(html_errorvalid);
 				return;
 			}else{
@@ -125,11 +125,7 @@ var ClassRegistry = function(){
 					//--- Valida el sexo ---//
 					if( document.formRegistry.opt_reg_sex ){
 						if( !document.formRegistry.opt_reg_sex[0].checked && !document.formRegistry.opt_reg_sex[1].checked ){
-							Validator.show_message({
-								message: 'Este campo es obligatorio',
-								element: document.formRegistry.opt_reg_sex[0].parentNode
-							});
-							
+                                                        Validator.message.show(document.formRegistry.opt_reg_sex[0].parentNode, ['Este campo es obligatorio']);
 							Progress.show(html_errorvalid);			
 							return;
 						}
@@ -139,11 +135,7 @@ var ClassRegistry = function(){
 					if( document.formRegistry.cboBirthDate_Day ){
 						var strDate = document.formRegistry.cboBirthDate_Day.value+"/"+document.formRegistry.cboBirthDate_Month.value+"/"+document.formRegistry.cboBirthDate_Year.value;
 						if( !validate_date(strDate) ){
-							Validator.show_message({
-								message: 'La fecha seleccionada es incorrecta.',
-								element: document.formRegistry.cboBirthDate_Year
-							});
-				
+                                                        Validator.message.show(document.formRegistry.cboBirthDate_Year, ['La fecha seleccionada es incorrecta.']);
 							Progress.show(html_errorvalid);
 							return;
 						}
@@ -151,39 +143,27 @@ var ClassRegistry = function(){
 			
 					//--- Valida campo "Pais" ---//
 					if( document.formRegistry.txt_reg_country && document.formRegistry.txt_reg_country.getAttribute("attrCode")=="0" ){
-						Validator.show_message({
-							message: 'El pa&iacute;s ingresado no existe.',
-							element: document.formRegistry.txt_reg_country
-						});			
+                                                Validator.message.show(document.formRegistry.txt_reg_country, ['El pa&iacute;s ingresado no existe.']);
 						Progress.show(html_errorvalid);
 						return;
 					}
 					//--- Valida campo "Provincia" ---//
 					if( document.formRegistry.txt_reg_province && document.formRegistry.txt_reg_province.getAttribute("attrCode")=="0" ){
-						Validator.show_message({
-							message: 'La provincia ingresada no existe.',
-							element: document.formRegistry.txt_reg_province
-						});			
+                                                Validator.message.show(document.formRegistry.txt_reg_province, ['La provincia ingresada no existe.']);
 						Progress.show(html_errorvalid);
 						return;
 					}
 			
 					//--- Valida campo "Pasaporte" ---//
 					if( document.formRegistry.cbo_reg_Passport && document.formRegistry.cbo_reg_Passport.value=="0" ){
-						Validator.show_message({
-							message: 'Este campo es obligatorio.',
-							element: document.formRegistry.cbo_reg_Passport
-						});			
+                                                Validator.message.show(document.formRegistry.cbo_reg_Passport, ['Este campo es obligatorio.']);
 						Progress.show(html_errorvalid);
 						return;
 					}
 			
 					//--- Valida campo "Idioma" ---//
 					if( document.formRegistry.txt_reg_language && document.formRegistry.txt_reg_language.getAttribute("attrCode")=="0" ){
-						Validator.show_message({
-							message: 'El idioma ingresado no existe.',
-							element: document.formRegistry.txt_reg_language
-						});			
+                                                Validator.message.show(document.formRegistry.txt_reg_language, ['El idioma ingresado no existe.']);
 						Progress.show(html_errorvalid);
 						return;
 					}
@@ -191,21 +171,15 @@ var ClassRegistry = function(){
 					//--- Valida campo "Trabajo" ---//
 					if( document.formRegistry.cbo_reg_work ){
 					   if( document.formRegistry.cbo_reg_work.value=="0" ) {
-							Validator.show_message({
-								message: 'Este campo es obligatorio.',
-								element: document.formRegistry.cbo_reg_work
-							});			
-							Progress.show(html_errorvalid);
-							return;			
+                                                Validator.message.show(document.formRegistry.cbo_reg_work, ['Este campo es obligatorio.']);
+                                                Progress.show(html_errorvalid);
+                                                return;
 					   }
 					   else if( document.formRegistry.cbo_reg_work.value=="+" ) {
 						   if( document.formRegistry.txt_reg_work_other.value.length==0 ){
-								Validator.show_message({
-									message: 'Este campo es obligatorio.',
-									element: document.formRegistry.txt_reg_work_other
-								});			
-								Progress.show(html_errorvalid);
-								return;
+                                                       Validator.message.show(document.formRegistry.txt_reg_work_other, ['Este campo es obligatorio.']);
+                                                        Progress.show(html_errorvalid);
+                                                        return;
 						   }
 					   }
 					}
@@ -213,44 +187,30 @@ var ClassRegistry = function(){
 					//--- Valida campo "Licencia" ---//
 					if( document.formRegistry.opt_reg_licence ){
 						if( !document.formRegistry.opt_reg_licence[0].checked && !document.formRegistry.opt_reg_licence[0].checked ){
-							Validator.show_message({
-								message: 'Este campo es obligatorio',
-								element: document.formRegistry.opt_reg_licence[0].parentNode
-							});
-							
+                                                        Validator.message.show(document.formRegistry.opt_reg_licence[0].parentNode, ['Este campo es obligatorio']);
 							Progress.show(html_errorvalid);			
 							return;				
 						}
 						
 						if( document.formRegistry.opt_reg_licence[0].checked ){
 							if( document.formRegistry.txt_reg_licence.value.length==0 ){
-								Validator.show_message({
-									message: 'Este campo es obligatorio',
-									element: document.formRegistry.txt_reg_licence
-								});
-								
-								Progress.show(html_errorvalid);			
-								return;
+                                                            Validator.message.show(document.formRegistry.txt_reg_licence, ['Este campo es obligatorio.']);
+                                                            Progress.show(html_errorvalid);
+                                                            return;
 							}
 						}
 					}
 			
 					//--- Valida campo "Listados de deportes" ---//
 					if( document.formRegistry.cboListSports_new && document.formRegistry.cboListSports_new.options.length==0 ){
-						Validator.show_message({
-							message: 'Debe seleccionar al menos un deporte.',
-							element: document.formRegistry.cboListSports_new
-						});			
+                                                Validator.message.show(document.formRegistry.cboListSports_new, ['Debe seleccionar al menos un deporte.']);
 						Progress.show(html_errorvalid);
 						return;			
 					}
 					
 					//--- Valida que este chequiado el check politicas de privacidad ---//
 					if( document.formRegistry.chkPrivacity && !document.formRegistry.chkPrivacity.checked ){
-						Validator.show_message({
-							message: 'Este campo es obligatorio.',
-							element: document.formRegistry.chkPrivacity
-						});			
+                                                Validator.message.show(document.formRegistry.chkPrivacity, ['Este campo es obligatorio.']);
 						Progress.show(html_errorvalid);
 						return;
 					}
@@ -299,11 +259,9 @@ var ClassRegistry = function(){
 		if( Params.coduser ) others_fields+="&coduser="+Params.coduser;
 		
 		
-		
 		//Progress.show(html_sendform);
 		var Ajax = new ClassAjax();
 			Ajax.on_finalizer = function(){
-				alert(this.responseHTML);
 				if( this.responseHTML=="sendmail_ok" ){
 					Progress.show(html_success);
 					
@@ -316,10 +274,7 @@ var ClassRegistry = function(){
 
 				}
 				else if( this.responseHTML=="code invalid" ){
-					Validator.show_message({
-						message: 'El c&oacute;digo ingresado es incorrecto.',
-						element: document.formRegistry.code
-					});
+					Validator.message.show(document.formRegistry.code, ["El c&oacute;digo ingresado es incorrecto."]);
 					Progress.hidden();
 					return;
 				}
@@ -338,31 +293,26 @@ var ClassRegistry = function(){
 		var day = document.formRegistry.cboBirthDate_Day.value;
 		var month = document.formRegistry.cboBirthDate_Month.value;
 		var year = document.formRegistry.cboBirthDate_Year.value;
-		
+
 		
 		if( day>0 && month>0 && year>0 ){
-			Validator.hidden_message(document.formRegistry.cboBirthDate_Year);
+			Validator.message.hidden($(document.formRegistry.cboBirthDate_Year));
 			
 			var str = day+"/"+month+"/"+year;
 			
 			if( validate_date(str) ){
 				var dateToday = new Date();
 				var age = dateToday.getFullYear()-parseFloat(year) -1;
-	
+
 				if( !(dateToday.getMonth() + 1 - parseInt(month) < 0) ) { //+ 1 porque los meses empiezan en 0
 					if( (dateToday.getMonth() + 1 - parseInt(month) > 0) ) age+=1;
 					else{
-						if( dateToday.getUTCDate() - parseInt(day) >= 0 ) age=+1;
+						if( dateToday.getUTCDate() - parseInt(day) >= 0 ) age+=1;
 					}
 				}
-				
 				document.formRegistry.txt_reg_Age.value = age;
 			}else{
-				Validator.show_message({
-					message: 'La fecha seleccionada es incorrecta.',
-					element: document.formRegistry.cboBirthDate_Year
-				});
-				
+                                Validator.message.show(document.formRegistry.cboBirthDate_Year, ['La fecha seleccionada es incorrecta.']);
 				document.formRegistry.txt_reg_Age.value = "";
 			}
 		}
@@ -533,15 +483,12 @@ var ClassRegistry = function(){
 							case "list_languages": var msg = "El idioma ingresado no existe."; break;
 						}
 						
-						Validator.show_message({
-							message: msg,
-							element: input
-						});						
+						Validator.message.show(input, [msg]);
 						input.setAttribute("attrCode", "0");
 												
 					}else{
 						input.setAttribute("attrCode", this.responseHTML);
-						Validator.hidden_message(input);						
+						Validator.message.hidden(input);
 					}				
 				}
 				Ajax.execute("POST", "includes/ajax/autocomplete.php?action=verify_data", 
@@ -549,7 +496,7 @@ var ClassRegistry = function(){
 									 "value="+ input.value);
 		}else{
 			input.setAttribute("attrCode", "0");
-			Validator.hidden_message(input, true);			
+			Validator.message.hidden(input);
 		}
 	}
 

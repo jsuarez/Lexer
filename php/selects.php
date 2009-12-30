@@ -1,5 +1,5 @@
-<?
-function get_options($option, $tableuser){
+<?php
+function get_options($option, $tableuser=""){
 	global $data;
 	
 	switch($option){	

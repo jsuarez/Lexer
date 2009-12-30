@@ -73,7 +73,10 @@ require_once("php/forms_advancedsearch.php");
 
 <div id="advanced_search">
     <div class="fields_advanced_search">
-    <?php get_form("deportista");?>
-	</div>
+        <form id="formAdvancedSearch" method="post" action="index.php" enctype="application/x-www-form-urlencoded">
+            <?php get_form("deportista");?>
+        </form>
+    </div>
+
 	<div class="button_search"><a href="#" onclick="Search.slider_search_advanced(); return false;">Busqueda Avanzada</a></div>
 </div>

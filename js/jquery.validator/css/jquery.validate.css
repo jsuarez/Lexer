@@ -31,11 +31,13 @@
 
 /*-------------------------- FORMULARIO: Solicitar Informacion -------------------------------*/
 .formError_Right{
-	position:absolute;
+        float:left;
 	padding-left:8px;
-	margin-top:70px;
+        margin-top:-16px;
+	margin-left:5px;
 	display:none;
 	z-index:5000;
+        white-space:normal !important;
 }
 	.formError_Right .formErrorContent{
 		width:100%; 
@@ -50,9 +52,9 @@
 	}
 	.formError_Right .formErrorArrow_right{
 		background:url(../images/arrow_left.png) no-repeat;
-		position:absolute;
-		left:0px;
-		top:3px;
+		position:relative;
+		left:-9px;
+		bottom:-16px;
 		width:9px;
 		height:15px;
 	}
