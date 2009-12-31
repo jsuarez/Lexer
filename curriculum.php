@@ -100,7 +100,7 @@ if( $_GET["id"]!="" ) $tableuser = $data->get_result("SELECT tableuser FROM user
                         </ul>
                     </div>
 
-                    <form id="form_registry" name="form_registry" action="" class="curriculum_content">ass</form>
+                    <form id="form_registry" name="form_registry" action="" class="curriculum_content"></form>
                 </div>
             </div>
             

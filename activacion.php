@@ -31,28 +31,29 @@ if( isset($_GET["ckey"]) && $data->consult("users", "id", $_GET["ckey"]) ){
 <!--fin header-->
 
 
-<!--inicio menu derecha-->
-	<div id="sidebar1">
-    <? include("includes/right.php");?>
-	</div>
-<!--fin menu derecha-->
-
 <!--inicio contenido-->
-	<div id="mainContent">
-        <div id="banner-centro">
-        <img src="images/banner-centro.jpg" alt="publicidad" />
-        </div>
+    <div id="mainContent">
+    	<div class="column_left">
+            <div id="banner-centro">
+                <?php include("includes/banner.php");?>
+            </div>
         
-        <h2>El usuario ha sido activado con &eacute;xito.</h2>
-        
-        <br class="clearfloat" />
+            <h2>El usuario ha sido activado con &eacute;xito.</h2>
 	</div>
+
+    	<div class="column_right">
+            <div id="sidebar1">
+                <? include("includes/right.php");?>
+            </div>
+        </div>
+        <br class="clearfloat" />
+    </div>
 <!--fin contenido-->
     	
 <!-- Este elemento de eliminación siempre debe ir inmediatamente después del div #mainContent para forzar al div #container a que contenga todos los elementos flotantes hijos <br class="clearfloat" />-->
 
 <!--inicio pie-->
-	<div id="footer">
+    <div id="footer">
     <? include("includes/footer.php");?>
     </div>
 <!-- fin pie -->

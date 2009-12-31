@@ -18,14 +18,14 @@ case "new":
 								   
 	$data->query("UPDATE users SET id='".md5($coduser)."' WHERE coduser=".$coduser);
 
-	/*$sendmail = new Class_SendMail();
+	$sendmail = new Class_SendMail();
 	$sendmail->from = REGISTER_EMAIL_FROM;
 	$sendmail->name_from = REGISTER_NAME_FROM;
 	$sendmail->to = $_POST["txt_reg_Email"];
 	$sendmail->subject = REGISTER_SUBJECT;
 	$sendmail->message = sprintf(REGISTER_MESSAGE, md5($coduser));
 	
-	if( $sendmail->send() ){*/
+	if( $sendmail->send() ){
 		$sql = "INSERT INTO `users_sponsors`(`coduser`, `business_name`, `cuit`, `address`, `country`,`province`,`city`,`cp`, `phone_pref1`, `phone_pref2`, `phone`, `cel_pref1`, `cel_pref2`, `cel`, `codcompanylist`, `titular_lastname`, `titular_firstname`, `titular_charge`, `titular_phone_pref1`, `titular_phone_pref2`, `titular_phone`, `titular_cel_pref1`, `titular_cel_pref2`, `titular_cel`, `titular_typedoc`, `titular_typedoc_new`, `titular_nrodoc`,`coditem`) ";
 		$sql.= "VALUES(";
 
@@ -78,10 +78,10 @@ case "new":
 		$data->query($sql);
 		
 		die("sendmail_ok");
-	/*}else {
+	}else {
 		$data->query("DELETE FROM users WHERE coduser=".$coduser);
 		die("sendmail_error");
-	}*/
+	}
 break;
 
 case "edit":

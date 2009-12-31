@@ -16,11 +16,6 @@ var ClassCurriculum = function(){
             case "users_sponsors": pagename = "sponsor.php"; break;
         }
 
-        //$("#form_registry").html("<p>tsdfasdfasdfsfd</p>");
-        
-
-        return;
-
         Ajax.on_finalizer = function(){
 
             $("#form_registry").html(this.responseHTML).ready(function(){

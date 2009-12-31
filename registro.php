@@ -43,7 +43,7 @@ addEvent(window, "load", function(){
 	<!--inicio contenido-->
 	<div id="mainContent">
 		<div class="column_left">
-			<div id="banner-centro"><img src="images/banner-centro.jpg" alt="publicidad" /></div>        
+			<div id="banner-centro"><?php include("includes/banner.php");?></div>
             <div class="registry">
                 <div class="div_combo"><span>Categor&iacute;a</span>
                     <select id="cboRegCategory" onChange="Registry.show_form(this.value);">
